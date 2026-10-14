@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2f2f0" />
+    <title>Etch list page redesign — Ahmad Mansee</title>
+    <link rel="stylesheet" href="styles.css?v=20261014ai" />
+  </head>
+  <body>
+    <div class="presentation">
+      <header class="site-header">
+        <a class="site-wordmark" href="#cover">Etch list page redesign</a>
+        <span class="header-hint">Scroll or use ↑ ↓ to move between slides</span>
+      </header>
+
+      <main class="slide-list" id="slides">
+        <section class="slide intro-slide" id="cover" aria-labelledby="cover-title">
+          <div class="intro-layout">
+            <div class="intro-copy">
+              <div class="brand-row">
+                <span class="app-mark" role="img" aria-label="Etch logo from the supplied home screenshot"></span>
+                <span class="eyebrow">Etch iOS · Design exercise</span>
+              </div>
+              <h1 id="cover-title">Etch list page<br /><em>redesign.</em></h1>
+              <p class="intro-deck">Making the list page easy to tell apart from a creator’s profile.</p>
+              <div class="intro-credit">
+                <strong>Ahmad Mansee</strong>
+                <span>Product Designer · October 2026</span>
+              </div>
+            </div>
+            <div class="cover-phones" aria-label="Current Etch list and profile screens">
+              <figure class="phone-figure">
+                <div class="phone-frame"><img src="../references/list.png" alt="Current Etch list page" /></div>
+                <figcaption>List page</figcaption>
+              </figure>
+              <figure class="phone-figure">
+                <div class="phone-frame"><img src="../references/profile.png" alt="Current Etch profile page" /></div>
+                <figcaption>Profile page</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="slide-chrome"><span>Introduction</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide index-slide" id="contents" aria-labelledby="contents-title">
+          <div class="index-layout">
+            <div class="index-heading">
+              <p class="section-label">Contents</p>
+              <h2 id="contents-title">What we’ll<br />cover.</h2>
+            </div>
+            <ol class="index-list">
+              <li><span class="index-number">01</span><span>The problem</span></li>
+              <li><span class="index-number">02</span><span>UI/UX audit</span></li>
+              <li><span class="index-number">03</span><span>Benchmarks</span></li>
+              <li><span class="index-number">04</span><span>Design exploration</span></li>
+              <li><span class="index-number">05</span><span>Final thoughts</span></li>
+            </ol>
+          </div>
+          <div class="slide-chrome"><span>Contents</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide problem-slide" id="the-problem" aria-labelledby="problem-title">
+          <p class="section-label">The brief</p>
+          <h2 id="problem-title">The problem</h2>
+          <div class="problem-columns">
+            <div class="problem-copy">
+              <p class="problem-label">The problem</p>
+              <p>People frequently mistake a list page for a user profile. This creates confusion and interrupts the experience.</p>
+            </div>
+            <div class="goal-copy">
+              <p class="problem-label">The goal</p>
+              <p>Redesign the list page so it clearly stands apart from a profile page.</p>
+            </div>
+          </div>
+          <section class="success-metrics" aria-label="Proposed A/B test metrics">
+            <div class="metric-header"><span>Metric</span><span>How to measure it</span><span>Proposed target</span></div>
+            <div class="metric-row"><span><strong>Creator follow rate</strong></span><span>Follows ÷ unique list viewers</span><span>+15% vs current</span></div>
+            <div class="metric-row"><span><strong>Place save rate</strong></span><span>Place saves ÷ unique list viewers</span><span>+10% vs current</span></div>
+            <div class="metric-row"><span><strong>Collection exploration</strong></span><span>Viewers opening two or more collections</span><span>+10% vs current</span></div>
+          </section>
+          <div class="slide-chrome"><span>The problem</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide audit-intro-slide" id="ui-ux-audit" aria-labelledby="audit-title">
+          <p class="section-label">Section 02</p>
+          <div class="audit-intro-layout">
+            <div>
+              <h2 id="audit-title">UI/UX audit</h2>
+            </div>
+            <div class="audit-intro-copy">
+              <p>This review looks for moments where the page asks people to process information before they can start browsing places.</p>
+              <p class="audit-source">Focus: header content, navigation, filters, and place organisation.</p>
+            </div>
+          </div>
+          <div class="slide-chrome"><span>UI/UX audit</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="legacy-benchmark audit-evidence-slide" id="audit-evidence" aria-labelledby="audit-evidence-title">
+          <div class="audit-evidence-head">
+            <div>
+              <p class="section-label">UI/UX audit · Current state</p>
+              <h2 id="audit-evidence-title">Where the list loses focus</h2>
+            </div>
+            <p><strong>How to explore:</strong> click a pink marker to inspect the related finding.</p>
+          </div>
+          <div class="audit-evidence-layout">
+            <div class="audit-screens" aria-label="Side-by-side list and profile screenshots with annotations">
+              <figure class="audit-phone list-phone">
+                <div class="audit-phone-frame">
+                  <img src="../references/list.png" alt="Current list page with numbered audit markers" />
+                  <button class="marker marker-one is-active" type="button" data-finding="finding-1" aria-controls="finding-1" aria-pressed="true">1</button><button class="marker marker-two" type="button" data-finding="finding-2" aria-controls="finding-2" aria-pressed="false">2</button><button class="marker marker-three" type="button" data-finding="finding-3" aria-controls="finding-3" aria-pressed="false">3</button><button class="marker marker-four" type="button" data-finding="finding-4" aria-controls="finding-4" aria-pressed="false">4</button>
+                </div>
+                <figcaption>List page</figcaption>
+              </figure>
+              <figure class="audit-phone profile-phone">
+                <div class="audit-phone-frame">
+                  <img src="../references/profile.png" alt="Creator profile page used as a comparison" />
+                  <button class="marker marker-five" type="button" data-finding="finding-5" aria-controls="finding-5" aria-pressed="false">5</button>
+                </div>
+                <figcaption>Profile page</figcaption>
+              </figure>
+            </div>
+            <ol class="audit-findings" aria-label="Audit findings">
+              <li id="finding-1" class="is-active"><button type="button" data-finding="finding-1"><span>01</span><strong>Creator details fill the entry point</strong><b>+</b></button><p>Portrait, handle, location, counts, rating, and actions appear before the first place. This creates a high information load before browsing begins.</p></li>
+              <li id="finding-2"><button type="button" data-finding="finding-2"><span>02</span><strong>The cover image uses valuable space</strong><b>+</b></button><p>The large image acts as decoration while the user’s main task is to understand the list and explore its places.</p></li>
+              <li id="finding-3"><button type="button" data-finding="finding-3"><span>03</span><strong>Primary navigation is easy to miss</strong><b>+</b></button><p>Places, Map, and Comments sit inside a rounded panel with low contrast, so the page’s main modes do not read as clear navigation.</p></li>
+              <li id="finding-4"><button type="button" data-finding="finding-4"><span>04</span><strong>Filters need two levels</strong><b>+</b></button><p>Quick categories are useful. Lower-frequency filters can sit behind one clear Filter control, keeping the first view focused.</p></li>
+              <li id="finding-5"><button type="button" data-finding="finding-5"><span>05</span><strong>The place feed has no visible structure</strong><b>+</b></button><p>A single two-column grid makes every place equal. Category swimlanes could give people clearer ways to start exploring.</p></li>
+            </ol>
+          </div>
+          <p class="audit-footnote">Desk review based on supplied screens. Behaviour and user comprehension will be validated in testing.</p>
+          <div class="slide-chrome"><span>UI/UX audit</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="legacy-benchmark audit-v2-slide" id="audit-visual-v2" aria-labelledby="audit-v2-title">
+          <div class="audit-v2-head">
+            <div>
+              <p class="section-label">UI/UX audit · V2</p>
+              <h2 id="audit-v2-title">List page: hierarchy and browse flow</h2>
+            </div>
+            <p>Click a numbered point to read the observation and the direction to test.</p>
+          </div>
+          <div class="audit-v2-stage" aria-label="List and profile screens with connected annotations">
+            <figure class="v2-list-phone">
+              <div class="v2-phone-frame">
+                <img src="../references/list.png" alt="Etch list page with six annotation points" />
+                <button class="v2-marker v2-one is-active" type="button" data-v2="1" aria-pressed="true">1</button>
+                <button class="v2-marker v2-two" type="button" data-v2="2" aria-pressed="false">2</button>
+                <button class="v2-marker v2-three" type="button" data-v2="3" aria-pressed="false">3</button>
+                <button class="v2-marker v2-four" type="button" data-v2="4" aria-pressed="false">4</button>
+                <button class="v2-marker v2-five" type="button" data-v2="5" aria-pressed="false">5</button>
+                <button class="v2-marker v2-six" type="button" data-v2="6" aria-pressed="false">6</button>
+              </div>
+              <figcaption>List page · design target</figcaption>
+            </figure>
+            <figure class="v2-profile-phone">
+              <div class="v2-phone-frame">
+                <img src="../references/profile.png" alt="Etch profile page used as a hierarchy reference" />
+              </div>
+              <figcaption>Profile page · reference</figcaption>
+            </figure>
+            <article class="v2-callout is-1" aria-live="polite">
+              <span class="v2-callout-number">01</span>
+              <div>
+                <p class="v2-callout-kicker">Header information</p>
+                <h3>Creator details dominate the first view.</h3>
+                <p>Portrait, handle, location, contribution counts, rating, and actions take users through a lot of information before the first place.</p>
+                <p class="v2-direction"><strong>Direction to test</strong> Keep lightweight attribution visible; move the fuller creator profile into a bottom sheet or profile link.</p>
+              </div>
+            </article>
+          </div>
+          <div class="v2-key"><span></span> Pink points mark the areas under review. The profile is shown only to compare information hierarchy.</div>
+          <div class="slide-chrome"><span>UI/UX audit · V2</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide audit-v3-slide" id="audit-visual-v3" aria-labelledby="audit-v3-title">
+          <div class="audit-v3-head">
+            <div>
+              <p class="section-label">Section 02</p>
+              <h2 id="audit-v3-title">Current list page</h2>
+            </div>
+            <p>Click a point to inspect a finding.</p>
+          </div>
+          <div class="audit-v3-stage">
+            <div class="v3-artboard">
+              <div class="v3-dynamic-leader" aria-hidden="true"></div>
+              <div class="v3-phones">
+                <figure class="v3-phone">
+                  <div class="v3-phone-frame">
+                    <img src="../references/list.png" alt="Etch list page with an example header annotation" />
+                    <button class="v3-dot v3-one is-open" type="button" data-v3="1" aria-controls="v3-example-card" aria-expanded="true">1</button>
+                    <button class="v3-dot v3-two" type="button" data-v3="2" aria-controls="v3-example-card" aria-expanded="false">2</button>
+                    <button class="v3-dot v3-three" type="button" data-v3="3" aria-controls="v3-example-card" aria-expanded="false">3</button>
+                    <button class="v3-dot v3-four" type="button" data-v3="4" aria-controls="v3-example-card" aria-expanded="false">4</button>
+                    <button class="v3-dot v3-five" type="button" data-v3="5" aria-controls="v3-example-card" aria-expanded="false">5</button>
+                    <button class="v3-dot v3-six" type="button" data-v3="6" aria-controls="v3-example-card" aria-expanded="false">6</button>
+                  </div>
+                  <figcaption>List page · design target</figcaption>
+                </figure>
+                <figure class="v3-phone">
+                  <div class="v3-phone-frame">
+                    <img src="../references/profile.png" alt="Etch profile page with hierarchy annotations" />
+                    <button class="v3-dot v3-seven" type="button" data-v3="7" aria-controls="v3-example-card" aria-expanded="false">7</button>
+                    <button class="v3-dot v3-eight" type="button" data-v3="8" aria-controls="v3-example-card" aria-expanded="false">8</button>
+                  </div>
+                  <figcaption>Profile page · reference</figcaption>
+                </figure>
+              </div>
+              <article class="v3-example-card is-open is-1" id="v3-example-card">
+                <span>01</span>
+                <div>
+                  <p class="v3-card-label">Page identity</p>
+                  <h3>The header does not say which page this is.</h3>
+                  <p>Add a clear List page title in the iOS header.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="slide-chrome"><span>Current list page</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="legacy-benchmark benchmark-slide benchmark-identity-slide" id="benchmarks-identity" aria-labelledby="benchmarks-identity-title">
+          <div class="benchmark-head">
+            <div>
+              <p class="section-label">Section 03 · Benchmarks</p>
+              <h2 id="benchmarks-identity-title">A list can credit its creator without becoming a profile.</h2>
+            </div>
+            <p>These examples keep a person visible while letting the collection remain the main destination.</p>
+          </div>
+          <div class="benchmark-grid">
+            <figure class="benchmark-card">
+              <div class="benchmark-image"><img src="../references/benchmarks/foursquare-profile.png" alt="Foursquare profile page" /></div>
+              <figcaption><span>Foursquare · Profile</span><strong>Identity has its own destination.</strong></figcaption>
+            </figure>
+            <figure class="benchmark-card">
+              <div class="benchmark-image"><img src="../references/benchmarks/foursquare-list.png" alt="Foursquare saved places list" /></div>
+              <figcaption><span>Foursquare · Saved list</span><strong>List name, place count, and creator are distinct.</strong></figcaption>
+            </figure>
+            <figure class="benchmark-card">
+              <div class="benchmark-image"><img src="../references/benchmarks/tripadvisor-trip.png" alt="Tripadvisor trip collection" /></div>
+              <figcaption><span>Tripadvisor · Trip</span><strong>Owner attribution stays lightweight.</strong></figcaption>
+            </figure>
+          </div>
+          <div class="benchmark-takeaway"><span>Takeaway</span><p>Use a compact “Curated by Khaled · Follow” row. Keep the full profile behind a tap.</p></div>
+          <div class="slide-chrome"><span>Benchmarks · Creator and list</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="legacy-benchmark benchmark-slide benchmark-browse-slide" id="benchmarks-browse" aria-labelledby="benchmarks-browse-title">
+          <div class="benchmark-head">
+            <div>
+              <p class="section-label">Benchmarks · Browse patterns</p>
+              <h2 id="benchmarks-browse-title">Discovery works better when structure stays visible.</h2>
+            </div>
+            <p>Filters, sections, and tabs give people more than one clear way to find a place.</p>
+          </div>
+          <div class="benchmark-grid">
+            <figure class="benchmark-card">
+              <div class="benchmark-image"><img src="../references/benchmarks/google-saves.png" alt="Google Maps saved places page" /></div>
+              <figcaption><span>Google Maps · Saved places</span><strong>Filters are visible before the list.</strong></figcaption>
+            </figure>
+            <figure class="benchmark-card">
+              <div class="benchmark-image"><img src="../references/benchmarks/google-discovery.png" alt="Google Maps local discovery page" /></div>
+              <figcaption><span>Google Maps · Local discovery</span><strong>Sections create different starting points.</strong></figcaption>
+            </figure>
+            <figure class="benchmark-card">
+              <div class="benchmark-image"><img src="../references/benchmarks/tripadvisor-trip.png" alt="Tripadvisor trip with saves itinerary and for you tabs" /></div>
+              <figcaption><span>Tripadvisor · Trip</span><strong>Tabs separate modes within one collection.</strong></figcaption>
+            </figure>
+          </div>
+          <div class="benchmark-takeaway"><span>Takeaway</span><p>Keep three main tabs visible, use a short filter row, and group place cards into category swimlanes.</p></div>
+          <div class="slide-chrome"><span>Benchmarks · Browse structure</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="legacy-benchmark google-intro-slide" id="google-intro" aria-labelledby="google-intro-title">
+          <p class="section-label">Section 03</p>
+          <h2 id="google-intro-title">Google Maps: one product,<br />clearer destinations.</h2>
+          <div class="google-intro-copy">
+            <p>Google Maps keeps personal activity, local discovery, and contributor identity in separate flows.</p>
+            <p><strong>What to look for</strong><br />The page purpose stays clear before users decide what to do next.</p>
+          </div>
+          <div class="slide-chrome"><span>Benchmarks · Google Maps</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="legacy-benchmark google-flow-slide" id="google-saves-flow" aria-labelledby="google-saves-title">
+          <div class="google-flow-copy">
+            <p class="section-label">Google Maps · Flow 01</p>
+            <h2 id="google-saves-title">Personal activity is grouped in one place.</h2>
+            <p class="google-flow-lede">The “You” space brings recent places and saved lists together. It is clearly about the current user, not a creator profile or a public collection.</p>
+            <div class="flow-finding"><span>01</span><div><strong>Clear page purpose</strong><p>“You” labels this as a personal area before people scan the content.</p></div></div>
+            <div class="flow-finding"><span>02</span><div><strong>Filters support a task</strong><p>Saved, Area, and Category focus the list without turning the page into a profile.</p></div></div>
+          </div>
+          <figure class="google-flow-media google-saves-media">
+            <img src="../references/benchmarks/google-saves.png" alt="Google Maps You page showing recent places and saved lists" />
+            <span class="flow-rect rect-one" aria-hidden="true"></span>
+            <span class="flow-rect rect-two" aria-hidden="true"></span>
+          </figure>
+          <div class="slide-chrome"><span>Google Maps · Personal activity</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="legacy-benchmark google-flow-slide" id="google-discovery-flow" aria-labelledby="google-discovery-title">
+          <div class="google-flow-copy">
+            <p class="section-label">Google Maps · Flow 02</p>
+            <h2 id="google-discovery-title">Discovery is organised by intent.</h2>
+            <p class="google-flow-lede">The Explore feed uses sections to move between curated lists and individual places. Each block gives people a clear starting point.</p>
+            <div class="flow-finding"><span>01</span><div><strong>Curated lists have context</strong><p>“Latest in the area” introduces the content before the cards appear.</p></div></div>
+            <div class="flow-finding"><span>02</span><div><strong>Places are grouped separately</strong><p>“Iconic places” creates a second browse mode with a distinct content type.</p></div></div>
+          </div>
+          <figure class="google-flow-media google-discovery-media">
+            <img src="../references/benchmarks/google-discovery.png" alt="Google Maps Explore page with latest lists and iconic places" />
+            <span class="flow-rect rect-one" aria-hidden="true"></span>
+            <span class="flow-rect rect-two" aria-hidden="true"></span>
+          </figure>
+          <div class="slide-chrome"><span>Google Maps · Discovery</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="legacy-benchmark google-flow-slide" id="google-profile-flow" aria-labelledby="google-profile-title">
+          <div class="google-flow-copy">
+            <p class="section-label">Google Maps · Flow 03</p>
+            <h2 id="google-profile-title">A contributor profile is its own destination.</h2>
+            <p class="google-flow-lede">Google Maps gives contributor identity its own dedicated page. The page controls and identity summary are grouped before any supporting content.</p>
+            <div class="flow-finding"><span>01</span><div><strong>Dedicated profile page</strong><p>Profile controls live in their own destination, separate from a collection.</p></div></div>
+            <div class="flow-finding"><span>02</span><div><strong>Grouped identity</strong><p>Name, Local Guide status, and contributions form one clear identity block.</p></div></div>
+          </div>
+          <figure class="google-flow-media google-profile-media">
+            <img src="../references/benchmarks/google-profile.png" alt="Google Maps contributor profile with identity and photo sections" />
+            <span class="flow-rect rect-one" aria-hidden="true"></span>
+            <span class="flow-rect rect-two" aria-hidden="true"></span>
+          </figure>
+          <div class="slide-chrome"><span>Google Maps · Contributor profile</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide benchmark-intro-slide" id="benchmarks-intro" aria-labelledby="benchmarks-intro-title">
+          <p class="section-label">Section 03</p>
+          <h2 id="benchmarks-intro-title">Benchmarks</h2>
+          <div class="benchmark-intro-copy">
+            <p>I looked at how comparable apps separate personal activity, discovery, and public contributor profiles.</p>
+            <p>Focus: page purpose, hierarchy, and the path from a list to a person.</p>
+          </div>
+          <div class="slide-chrome"><span>Benchmarks</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide google-benchmark-slide" id="google-benchmark" aria-labelledby="google-benchmark-title">
+          <div class="google-benchmark-head">
+            <div>
+              <h2 id="google-benchmark-title">Google screens</h2>
+            </div>
+          </div>
+          <div class="google-benchmark-layout">
+            <div class="google-benchmark-screens">
+              <figure class="google-benchmark-card google-card-you">
+                <div class="google-phone"><img src="../references/benchmarks/google-saves.png" alt="Google Maps You page" /><span class="google-mark" aria-hidden="true">01</span></div>
+                <figcaption><span>You</span><strong>My saved lists are private. Other people cannot see them.</strong></figcaption>
+              </figure>
+              <figure class="google-benchmark-card google-card-explore">
+                <div class="google-phone"><img src="../references/benchmarks/google-discovery.png" alt="Google Maps Explore page" /><span class="google-mark google-mark-primary" aria-hidden="true">02</span><span class="google-mark google-mark-secondary" aria-hidden="true"></span></div>
+                <figcaption><span>Explore</span><strong>Section titles and horizontal scroll support category browsing.</strong></figcaption>
+              </figure>
+              <figure class="google-benchmark-card google-card-profile">
+                <div class="google-phone"><img src="../references/benchmarks/google-profile.png" alt="Google Maps contributor profile" /><span class="google-mark" aria-hidden="true">03</span></div>
+                <figcaption><span>Contributor profile</span><strong>Keep contributor details in their own destination to minimise clutter.</strong></figcaption>
+              </figure>
+            </div>
+            <aside class="google-benchmark-takeaways">
+              <h3>Takeaways</h3>
+              <ol>
+                <li><b>Private saves</b>Personal saved lists are visible only to the owner.</li>
+                <li><b>Browsing structure</b>Section titles and horizontal scroll make categories easier to explore.</li>
+                <li><b>Less clutter</b>Keep contributor details on their own page, out of the curated list.</li>
+              </ol>
+            </aside>
+          </div>
+          <div class="slide-chrome"><span>Benchmarks · Google Maps</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide google-benchmark-slide foursquare-benchmark-slide" id="foursquare-benchmark" aria-labelledby="foursquare-benchmark-title">
+          <div class="google-benchmark-head">
+            <div>
+              <h2 id="foursquare-benchmark-title">Foursquare screens</h2>
+            </div>
+          </div>
+          <div class="google-benchmark-layout foursquare-benchmark-layout">
+            <div class="foursquare-benchmark-screens">
+              <figure class="google-benchmark-card foursquare-card">
+                <div class="google-phone"><img src="../references/benchmarks/foursquare-profile.png" alt="Foursquare creator overview" /></div>
+                <figcaption><span>Creator overview</span><strong>Saved and liked categories, identity, and Add friend sit on one page.</strong></figcaption>
+              </figure>
+              <figure class="google-benchmark-card foursquare-card">
+                <div class="google-phone"><img src="../references/benchmarks/foursquare-list.png" alt="Foursquare saved places list" /></div>
+                <figcaption><span>Saved places</span><strong>Opening a category leads directly to a named list with its place count and entries.</strong></figcaption>
+              </figure>
+            </div>
+            <aside class="google-benchmark-takeaways">
+              <h3>Takeaways</h3>
+              <ol>
+                <li><b>One creator destination</b>Identity, categories, and the social action live together. There is no extra public profile page.</li>
+                <li><b>Compact identity</b>A small portrait and plain header keep attention on the creator's places.</li>
+                <li><b>Clear drill-in</b>A list title, place count, owner, and distance sorting make the saved-place view easy to scan.</li>
+              </ol>
+            </aside>
+          </div>
+          <div class="slide-chrome"><span>Benchmarks · Foursquare</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide findings-slide" id="findings" aria-labelledby="findings-title">
+          <h2 id="findings-title">UI UX audit and benchmarks findings</h2>
+          <ol class="findings-list">
+            <li><span>01</span><div><strong>The current list starts with profile information before people see places.</strong><p>The portrait, creator details, location, counts, and actions fill the entry view.</p></div></li>
+            <li><span>02</span><div><strong>The current list does not clearly state its page type.</strong><p>The list title is visually close to the creator portrait, so the relationship is hard to read.</p></div></li>
+            <li><span>03</span><div><strong>Google Maps separates personal activity, discovery, and contributor profiles.</strong><p>Each has a dedicated destination with its own content hierarchy.</p></div></li>
+            <li><span>04</span><div><strong>Foursquare keeps categories and social actions in the creator overview.</strong><p>Saved places and liked places can be opened from the same screen as Add friend.</p></div></li>
+            <li><span>05</span><div><strong>Clear titles, categories, counts, and sorting support place browsing.</strong><p>These patterns appear in Google Maps discovery and Foursquare saved-place lists.</p></div></li>
+          </ol>
+          <div class="slide-chrome"><span>UI UX audit and benchmarks findings</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide impact-slide" id="impact-effort" aria-labelledby="impact-effort-title">
+          <h2 id="impact-effort-title">Impact vs effort</h2>
+          <div class="impact-layout">
+            <span class="impact-axis">Impact ↑</span>
+            <span class="effort-axis">Effort →</span>
+            <div class="impact-matrix" aria-label="Idea impact and effort matrix">
+              <div class="matrix-quadrant quadrant-high-low">
+                <span class="quadrant-label">High impact · low effort</span>
+                <article class="sticky sticky-blue is-priority">Keep creator details compact</article>
+                <article class="sticky sticky-yellow is-priority">Add a clear list page title</article>
+                <article class="sticky sticky-pink is-priority">Reduce the cover image height</article>
+                <article class="sticky sticky-green">Use clearer filter labels</article>
+              </div>
+              <div class="matrix-quadrant quadrant-high-high">
+                <span class="quadrant-label">High impact · high effort</span>
+                <article class="sticky sticky-lilac is-priority">Add horizontal and vertical navigation options</article>
+                <article class="sticky sticky-yellow">Group curated lists into clearly titled categories</article>
+                <article class="sticky sticky-blue is-priority">Make Places, Map, and Comments navigation more visible</article>
+                <article class="sticky sticky-green">Add richer filters and categories</article>
+              </div>
+              <div class="matrix-quadrant quadrant-low-low">
+                <span class="quadrant-label">Lower impact · low effort</span>
+                <article class="sticky sticky-pink">Add collection cover treatments</article>
+                <article class="sticky sticky-blue">Show a category label on each place</article>
+                <article class="sticky sticky-yellow">Show when the collection was updated</article>
+                <article class="sticky sticky-green">Show the creator’s contribution count</article>
+              </div>
+              <div class="matrix-quadrant quadrant-low-high">
+                <span class="quadrant-label">Lower impact · high effort</span>
+                <article class="sticky sticky-lilac">Explore creator achievements</article>
+                <article class="sticky sticky-green">Add categories inside each collection</article>
+                <article class="sticky sticky-pink is-priority">Move saved places and Follow to the list page</article>
+              </div>
+            </div>
+          </div>
+          <div class="slide-chrome"><span>Impact vs effort</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide design-exploration-intro" id="design-exploration" aria-labelledby="design-exploration-title">
+          <p class="section-label">Section 04</p>
+          <div class="design-exploration-layout">
+            <h2 id="design-exploration-title">Design exploration</h2>
+            <div class="design-exploration-copy">
+              <p>One design approach for making the list page easier to recognise, browse, and navigate.</p>
+              <p>Focus: page hierarchy, creator details, collections, and navigation.</p>
+            </div>
+          </div>
+          <div class="slide-chrome"><span>Design exploration</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide approach-one-slide" id="design-approach-one" aria-labelledby="approach-one-title">
+          <div class="approach-one-layout">
+            <figure class="approach-phone">
+              <figcaption>Collection page</figcaption>
+              <div class="approach-phone-viewport"><iframe src="../prototype-v2/?slide=list" title="Collection page prototype" loading="eager" tabindex="-1"></iframe></div>
+            </figure>
+            <figure class="approach-phone">
+              <figcaption>Creator details</figcaption>
+              <div class="approach-phone-viewport"><iframe src="../prototype-v2/?slide=creator" title="Creator details prototype" loading="eager" tabindex="-1"></iframe></div>
+            </figure>
+            <div class="approach-notes">
+              <p class="section-label">Design exploration</p>
+              <h2 id="approach-one-title">Design approach one</h2>
+              <div><span>01</span><p>The collection title leads the page. Khaled’s name and actions stay close to it.</p></div>
+              <div><span>02</span><p>Places, Map, and Comments remain visible; people can browse collections or all places.</p></div>
+              <div><span>03</span><p>Creator details open in a bottom sheet, keeping the list page focused on places.</p></div>
+              <a href="../prototype-v2/" target="_blank" rel="noopener">Open interactive prototype ↗</a>
+            </div>
+          </div>
+          <div class="slide-chrome"><span>Design approach one</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide final-thoughts-slide" id="final-thoughts" aria-labelledby="final-thoughts-title">
+          <p class="section-label">Section 05</p>
+          <h2 id="final-thoughts-title">Final thoughts</h2>
+          <div class="final-thoughts-layout">
+            <p class="final-thoughts-lead">Make the collection page the public destination for places and creator context.</p>
+            <div class="final-thoughts-points">
+              <div><span>01</span><p>Lead with the collection. Keep the creator’s identity, Follow, Message, and relevant details on the same page.</p></div>
+              <div><span>02</span><p>Keep the owner’s profile for editing their details. Avoid repeating the same public information across two pages.</p></div>
+              <div><span>03</span><p>Run an A/B test against the current page before deciding whether this approach improves following and place discovery.</p></div>
+            </div>
+          </div>
+          <div class="slide-chrome"><span>Final thoughts</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="slide thank-you-slide" id="thank-you" aria-labelledby="thank-you-title">
+          <div class="thank-you-content">
+            <span class="app-mark" role="img" aria-label="Etch logo from the supplied home screenshot"></span>
+            <h2 id="thank-you-title">Thank you.</h2>
+          </div>
+          <div class="slide-chrome"><span>Etch list page redesign</span><span class="slide-index"></span></div>
+        </section>
+
+        <section class="legacy-benchmark audit-summary-slide" id="audit-summary" aria-labelledby="audit-summary-title">
+          <p class="section-label">UI/UX audit · Summary</p>
+          <h2 id="audit-summary-title">What the audit shows</h2>
+          <div class="audit-summary-grid audit-summary-grid-four">
+            <div class="summary-statement"><span>01</span><p><strong>Name the page</strong>Give both list and profile pages a clear title in the header.</p></div>
+            <div class="summary-statement"><span>02</span><p><strong>Simplify the top</strong>Use a shorter cover and keep only essential creator details visible.</p></div>
+            <div class="summary-statement"><span>03</span><p><strong>Make navigation obvious</strong>Give Places, Map, and Comments a clear tab treatment.</p></div>
+            <div class="summary-statement"><span>04</span><p><strong>Organise discovery</strong>Keep quick filters visible and group places into category swimlanes.</p></div>
+          </div>
+          <div class="slide-chrome"><span>UI/UX audit</span><span class="slide-index"></span></div>
+        </section>
+      </main>
+    </div>
+    <script src="main.js?v=20261013r"></script>
+  </body>
+</html>

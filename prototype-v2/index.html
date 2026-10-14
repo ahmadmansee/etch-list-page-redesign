@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Etch — Creator list, Version 2</title>
+  <link rel="stylesheet" href="styles.css?v=9" />
+</head>
+<body>
+  <main class="app" aria-label="Etch creator list prototype version 2">
+    <header class="ios-header" id="iosHeader">
+      <div class="status-bar" aria-hidden="true"><span>9:41</span><span class="status-icons"><i data-lucide="signal"></i><i data-lucide="wifi"></i><i data-lucide="battery-full"></i></span></div>
+      <div class="nav-row">
+        <button class="nav-icon" aria-label="Go back"><i data-lucide="chevron-left"></i></button>
+        <p class="nav-title" id="navTitle">Parks and Walkways of Riyadh</p>
+        <div class="nav-actions">
+          <button class="follow-pill" id="followButton"><i data-lucide="user-plus"></i><span>Follow</span></button>
+        </div>
+      </div>
+    </header>
+
+    <section class="list-hero" aria-labelledby="collectionTitle">
+      <h1 id="collectionTitle">Parks and Walkways<br />of Riyadh</h1>
+      
+      <div class="creator-line">
+        <img src="assets/khaled-avatar.png" alt="Khaled" class="avatar" />
+        <button class="creator-button" id="creatorButton" aria-label="View Khaled details"><span>Curated by <strong>Khaled</strong></span><small>Local guide · Riyadh, Saudi Arabia <i data-lucide="chevron-right"></i></small></button><div class="creator-actions"><button class="creator-action" id="messageButton" aria-label="Message Khaled"><i data-lucide="message-circle"></i></button><button class="creator-action ios-share-button" id="shareButton" aria-label="Share this list"><svg class="ios-share" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14V3M8 7l4-4 4 4M5 10v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-8" /></svg></button></div>
+      </div>
+    </section>
+
+    <nav class="section-tabs" aria-label="Collection navigation">
+      <button class="tab active" data-view="places"><i data-lucide="map-pin"></i>Places</button>
+      <button class="tab" data-view="map"><i data-lucide="map"></i>Map</button>
+      <button class="tab" data-view="comments"><i data-lucide="message-square"></i>Comments</button>
+    </nav>
+
+    <section class="view active-view" id="placesView">
+      <div class="content-toolbar">
+        <div><h2>Explore places</h2></div>
+        <button class="filter-button" id="filterButton"><i data-lucide="sliders-horizontal"></i><span>Filters</span></button>
+      </div>
+      <div class="browse-switch" role="group" aria-label="Choose how to browse">
+        <button class="browse-option active" data-mode="collections"><i data-lucide="rows-3"></i>Collections <b>4</b></button>
+        <button class="browse-option" data-mode="all"><i data-lucide="list"></i>All places <b>36</b></button>
+      </div>
+
+      <div id="collectionMode">
+        <section class="collection-section">
+          <div class="rail-heading"><div><h3>Family friendly</h3><p>12 places for an easy day out</p></div><button class="see-all" data-collection="Family friendly">See all <i data-lucide="arrow-right"></i></button></div>
+          <div class="place-rail">
+            <article class="rail-card"><div class="image-wrap"><img src="assets/place-olaya.png" alt="Al-Olaya Park playground" /><span>Park</span><button aria-label="Save Al-Olaya Park"><i data-lucide="bookmark"></i></button></div><h4>Al-Olaya Park</h4><p>4.3 · 1,326 ratings</p></article>
+            <article class="rail-card"><div class="image-wrap"><img src="assets/place-garden.png" alt="Al Madhar North Park" /><span>Park</span><button aria-label="Save Al Madhar North Park"><i data-lucide="bookmark"></i></button></div><h4>حديقة المعذر الشمالي</h4><p>4.1 · 789 ratings</p></article>
+            <article class="rail-card"><div class="image-wrap"><img src="assets/place-park.png" alt="King Abdullah Park fountains" /><span>Evening</span><button aria-label="Save King Abdullah Park"><i data-lucide="bookmark"></i></button></div><h4>King Abdullah Park</h4><p>4.3 · 44,103 ratings</p></article>
+          </div>
+        </section>
+        <section class="collection-section">
+          <div class="rail-heading"><div><h3>Walks after sunset</h3><p>9 paths to wander at a slower pace</p></div><button class="see-all" data-collection="Walks after sunset">See all <i data-lucide="arrow-right"></i></button></div>
+          <div class="place-rail">
+            <article class="rail-card"><div class="image-wrap"><img src="assets/place-walkway.png" alt="Al Olaya walkway" /><span>Walkway</span><button aria-label="Save Al Olaya walkway"><i data-lucide="bookmark"></i></button></div><h4>ممشى العليا</h4><p>4.2 · 93 ratings</p></article>
+            <article class="rail-card"><div class="image-wrap"><img src="assets/place-park.png" alt="King Abdullah Park fountains" /><span>Fountain</span><button aria-label="Save King Abdullah Park"><i data-lucide="bookmark"></i></button></div><h4>King Abdullah Park</h4><p>4.3 · 44,103 ratings</p></article>
+          </div>
+        </section>
+      </div>
+
+      <section class="all-places" id="allMode" hidden>
+        <div class="all-heading"><h3>All places</h3><button class="sort-button"><i data-lucide="arrow-down-up"></i>Closest</button></div>
+        <div class="place-list">
+          <article class="list-card"><img src="assets/place-walkway.png" alt="Al Olaya walkway" /><div><span>Walkway</span><h4>ممشى العليا</h4><p>Riyadh · 4.2 · 93 ratings</p></div><button aria-label="Save Al Olaya walkway"><i data-lucide="bookmark"></i></button></article>
+          <article class="list-card"><img src="assets/place-park.png" alt="King Abdullah Park fountains" /><div><span>Park</span><h4>King Abdullah Park</h4><p>Riyadh · 4.3 · 44,103 ratings</p></div><button aria-label="Save King Abdullah Park"><i data-lucide="bookmark"></i></button></article>
+          <article class="list-card"><img src="assets/place-olaya.png" alt="Al-Olaya Park playground" /><div><span>Park</span><h4>Al-Olaya Park</h4><p>Riyadh · 4.3 · 1,326 ratings</p></div><button aria-label="Save Al-Olaya Park"><i data-lucide="bookmark"></i></button></article>
+          <article class="list-card"><img src="assets/place-garden.png" alt="Al Madhar North Park" /><div><span>Park</span><h4>حديقة المعذر الشمالي</h4><p>Riyadh · 4.1 · 789 ratings</p></div><button aria-label="Save Al Madhar North Park"><i data-lucide="bookmark"></i></button></article>
+        </div>
+      </section>
+    </section>
+
+    <section class="view map-view" id="mapView"><div class="map-canvas"><button class="map-pin one">4.2</button><button class="map-pin two">4.3</button><button class="map-pin three">4.1</button><p>36 places</p></div><button class="map-list" id="backToPlaces"><i data-lucide="list"></i>Browse all places</button></section>
+    <section class="view comments-view" id="commentsView"><i data-lucide="message-circle"></i><h2>Start the conversation</h2><p>Share a tip or ask Khaled a question about this collection.</p><button class="comment-action">Write a comment</button></section>
+
+    <div class="toast" id="toast" role="status"></div>
+  </main>
+
+  <div class="scrim" id="scrim"></div>
+  <aside class="sheet creator-sheet" id="creatorSheet" aria-hidden="true"><div class="sheet-handle"></div><button class="sheet-close" data-close-sheet aria-label="Close creator details"><i data-lucide="x"></i></button><div class="creator-identity"><img src="assets/khaled-avatar.png" alt="Khaled" class="sheet-avatar" /><div><h2>Khaled</h2><span class="guide-badge"><i data-lucide="badge-check"></i>Local guide</span></div></div><div class="creator-metrics"><span><i data-lucide="star"></i>4.8</span><span><i data-lucide="users-round"></i>78 followers</span><span><i data-lucide="map-pinned"></i>411 contributions</span></div><button class="sheet-follow" id="sheetFollowButton"><i data-lucide="user-plus"></i><span>Follow</span></button><p class="detail-row"><i data-lucide="map-pin"></i>Riyadh, Saudi Arabia</p><p class="detail-row"><i data-lucide="calendar-days"></i>Member since 2022</p><p class="detail-row"><i data-lucide="instagram"></i>Instagram</p></aside>
+  <aside class="sheet filters-sheet" id="filterSheet" aria-hidden="true"><div class="sheet-handle"></div><button class="sheet-close" data-close-sheet aria-label="Close filters"><i data-lucide="x"></i></button><h2>Find your kind of place</h2><section class="filter-group"><h3><i data-lucide="trees"></i>Place type</h3><div><button class="filter-chip selected">All</button><button class="filter-chip">Park</button><button class="filter-chip">Walkway</button><button class="filter-chip">Playground</button></div></section><section class="filter-group"><h3><i data-lucide="users-round"></i>Good for</h3><div><button class="filter-chip">Families</button><button class="filter-chip">Exercise</button><button class="filter-chip">Picnic</button></div></section><section class="filter-group"><h3><i data-lucide="star"></i>Rating</h3><div><button class="filter-chip">4.5+</button><button class="filter-chip">4.0+</button><button class="filter-chip">Any rating</button></div></section><button class="apply-button" id="applyFilters">Show 36 places</button></aside>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="main.js?v=9"></script>
+</body>
+</html>
