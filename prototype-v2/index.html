@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#ffffff" />
   <title>Etch — Creator list, Version 2</title>
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body>
   <main class="app" aria-label="Etch creator list prototype version 2">
@@ -31,7 +31,7 @@
 
     <nav class="section-tabs" aria-label="Collection navigation">
       <button class="tab active" data-view="places"><i data-lucide="map-pin"></i>Places</button>
-      <button class="tab" data-view="map"><i data-lucide="map"></i>Map</button>
+      <button class="tab" data-view="lists"><i data-lucide="layers-3"></i>More lists</button>
       <button class="tab" data-view="comments"><i data-lucide="message-square"></i>Comments</button>
     </nav>
 
@@ -41,7 +41,7 @@
         <button class="filter-button" id="filterButton"><i data-lucide="sliders-horizontal"></i><span>Filters</span></button>
       </div>
       <div class="browse-switch" role="group" aria-label="Choose how to browse">
-        <button class="browse-option active" data-mode="collections"><i data-lucide="rows-3"></i>Collections <b>4</b></button>
+        <button class="browse-option active" data-mode="collections"><i data-lucide="rows-3"></i>Sections <b>4</b></button>
         <button class="browse-option" data-mode="all"><i data-lucide="list"></i>All places <b>36</b></button>
       </div>
 
@@ -74,16 +74,25 @@
       </section>
     </section>
 
+    <section class="view creator-lists-view" id="listsView" aria-labelledby="moreListsTitle">
+      <div class="lists-intro"><p class="lists-kicker">Khaled’s collections</p><h2 id="moreListsTitle">More from Khaled</h2><p>Explore other lists curated by Khaled.</p></div>
+      <div class="other-list-stack">
+        <article class="other-list-card"><div class="other-cover jeddah-cover" role="img" aria-label="Jeddah collection cover"></div><div><h3>Jeddah</h3><p>10 places · Last edited 3d ago</p></div></article>
+        <article class="other-list-card"><div class="other-cover remote-cover" role="img" aria-label="Remote Work collection cover"></div><div><h3>Remote Work</h3><p>11 places · Last edited 4d ago</p></div></article>
+      </div>
+    </section>
     <section class="view map-view" id="mapView"><div class="map-canvas"><button class="map-pin one">4.2</button><button class="map-pin two">4.3</button><button class="map-pin three">4.1</button><p>36 places</p></div><button class="map-list" id="backToPlaces"><i data-lucide="list"></i>Browse all places</button></section>
     <section class="view comments-view" id="commentsView"><i data-lucide="message-circle"></i><h2>Start the conversation</h2><p>Share a tip or ask Khaled a question about this collection.</p><button class="comment-action">Write a comment</button></section>
+
+    <button class="map-fab" id="mapFab" aria-label="Open map"><i data-lucide="map" class="fab-map-icon"></i><i data-lucide="list" class="fab-list-icon"></i><span>Map</span></button>
 
     <div class="toast" id="toast" role="status"></div>
   </main>
 
   <div class="scrim" id="scrim"></div>
-  <aside class="sheet creator-sheet" id="creatorSheet" aria-hidden="true"><div class="sheet-handle"></div><button class="sheet-close" data-close-sheet aria-label="Close creator details"><i data-lucide="x"></i></button><div class="creator-identity"><img src="assets/khaled-avatar.png" alt="Khaled" class="sheet-avatar" /><div><h2>Khaled</h2><span class="guide-badge"><i data-lucide="badge-check"></i>Local guide</span></div></div><div class="creator-metrics"><span><i data-lucide="star"></i>4.8</span><span><i data-lucide="users-round"></i>78 followers</span><span><i data-lucide="map-pinned"></i>411 contributions</span></div><button class="sheet-follow" id="sheetFollowButton"><i data-lucide="user-plus"></i><span>Follow</span></button><p class="detail-row"><i data-lucide="map-pin"></i>Riyadh, Saudi Arabia</p><p class="detail-row"><i data-lucide="calendar-days"></i>Member since 2022</p><p class="detail-row"><i data-lucide="instagram"></i>Instagram</p></aside>
+  <aside class="sheet creator-sheet" id="creatorSheet" aria-hidden="true"><button class="sheet-handle sheet-handle-button" id="expandCreatorSheet" aria-label="Expand creator details" aria-expanded="false"></button><button class="sheet-close" data-close-sheet aria-label="Close creator details"><i data-lucide="x"></i></button><div class="creator-identity"><img src="assets/khaled-avatar.png" alt="Khaled" class="sheet-avatar" /><div><h2>Khaled</h2><span class="guide-badge"><i data-lucide="badge-check"></i>Local guide</span></div></div><div class="creator-metrics"><span><i data-lucide="star"></i>4.8</span><span><i data-lucide="users-round"></i>78 followers</span><span><i data-lucide="map-pinned"></i>411 contributions</span></div><button class="sheet-follow" id="sheetFollowButton"><i data-lucide="user-plus"></i><span>Follow</span></button><section class="sheet-other-lists"><div class="sheet-list-heading"><h3>Other lists by Khaled</h3><span>29 lists</span></div><div class="sheet-list-item"><div class="other-cover jeddah-cover" role="img" aria-label="Jeddah collection cover"></div><div><strong>Jeddah</strong><small>10 places</small></div></div><div class="sheet-list-item"><div class="other-cover remote-cover" role="img" aria-label="Remote Work collection cover"></div><div><strong>Remote Work</strong><small>11 places</small></div></div><button class="browse-creator-lists" id="browseCreatorLists">Browse Khaled’s lists <i data-lucide="arrow-right"></i></button></section><p class="detail-row"><i data-lucide="map-pin"></i>Riyadh, Saudi Arabia</p><p class="detail-row"><i data-lucide="calendar-days"></i>Member since 2022</p><p class="detail-row"><i data-lucide="instagram"></i>Instagram</p></aside>
   <aside class="sheet filters-sheet" id="filterSheet" aria-hidden="true"><div class="sheet-handle"></div><button class="sheet-close" data-close-sheet aria-label="Close filters"><i data-lucide="x"></i></button><h2>Find your kind of place</h2><section class="filter-group"><h3><i data-lucide="trees"></i>Place type</h3><div><button class="filter-chip selected">All</button><button class="filter-chip">Park</button><button class="filter-chip">Walkway</button><button class="filter-chip">Playground</button></div></section><section class="filter-group"><h3><i data-lucide="users-round"></i>Good for</h3><div><button class="filter-chip">Families</button><button class="filter-chip">Exercise</button><button class="filter-chip">Picnic</button></div></section><section class="filter-group"><h3><i data-lucide="star"></i>Rating</h3><div><button class="filter-chip">4.5+</button><button class="filter-chip">4.0+</button><button class="filter-chip">Any rating</button></div></section><button class="apply-button" id="applyFilters">Show 36 places</button></aside>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-  <script src="main.js?v=9"></script>
+  <script src="main.js?v=10"></script>
 </body>
 </html>
